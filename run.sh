@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+mkdir /var/www/html/testrail/logs
+chown www-data /var/www/html/testrail/logs
+
 /etc/init.d/mysql start
 /etc/init.d/apache2 start
 

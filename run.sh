@@ -3,6 +3,8 @@
 mkdir /var/www/html/testrail/logs
 chown www-data /var/www/html/testrail/logs
 
+echo '* * * * * www-data /usr/bin/php /var/www/html/testrail/task.php' > /etc/cron.d/testrail
+
 /etc/init.d/mysql start
 /etc/init.d/apache2 start
 

@@ -18,5 +18,7 @@ RUN echo "zend_extension=/ioncube/ioncube_loader_lin_5.5.so" > /etc/php5/apache2
 COPY testrail-*.zip /
 RUN cd /var/www/html && unzip -q /testrail-*.zip
 
+# COPY config.php /var/www/html/testrail/config.php
+
 COPY run.sh /
 CMD /run.sh
